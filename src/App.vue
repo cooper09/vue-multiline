@@ -10,7 +10,7 @@
         href="http://www.multilineins.com/"
         target="_blank"
       >
-        <span class="mr-2">Go to Websight</span>
+        <span class="mr-2">Go to Website</span>
       </v-btn>
     </v-app-bar>
 

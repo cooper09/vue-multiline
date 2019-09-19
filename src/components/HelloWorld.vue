@@ -1,6 +1,5 @@
 <template>
   <v-container>
-    Form goes here...
     <v-card>
       <v-card-title>
         <h3>Please tell us more about yourself.</h3>
