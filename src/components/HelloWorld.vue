@@ -7,6 +7,7 @@
       <v-form class="px3 myform">
         <v-text-field label="First Name" v-model="first"></v-text-field>
         <v-text-field label="Last Name" v-model="last"></v-text-field>
+        <v-text-field label="Phone"  v-model="phone" ></v-text-field>
         <v-text-field label="Email"  v-model="email" ></v-text-field>
         <v-textarea label="Additional Comments"  v-model="info" ></v-textarea>
         <v-btn text class="success btn" @click="submit()">Submit</v-btn>
@@ -22,6 +23,7 @@ export default {
     return {
       first: "",
       last: "",
+      phone: "",
       email: "",
       info: ""
     }
@@ -35,6 +37,7 @@ export default {
       var infoObj = {
         firstname: this.first,
         lastname: this.last,
+        phone: this.phone,
         email: this.email,
         info: this.info,
         timestamp: timestamp
@@ -53,6 +56,7 @@ export default {
       
           this.first = "";
           this.last="";
+          this.phone="";
           this.email="";
           this.info="";
           
