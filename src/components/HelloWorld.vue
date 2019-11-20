@@ -6,9 +6,21 @@
         <v-spacer></v-spacer>
         <p>Call: 914-485-4463</p>
       </v-card-title>
+
+        <v-layer 
+          justify-center 
+          text-center 
+          wrap
+          >
+          <v-flex xs12>
+            <center><p class='text-center'>At Multi-line Insurance Agency we are continuously working to provide the individual coverage you require. When it comes to protecting your auto, home, business and family, don't leave it up to chance, or fly-by-night brokers. At Multi-line Insurance Agency we take pride in our business and strive to be relationship specialists providing you with the total insurance solution for all your needs. Being insured with the best has its advantages.</p></center>
+          </v-flex>
+        </v-layer>
+
       <v-form class="px3 myform">
         <v-text-field label="First Name" v-model="first"></v-text-field>
         <v-text-field label="Last Name" v-model="last"></v-text-field>
+        <v-text-field label="Phone"  v-model="phone" ></v-text-field>
         <v-text-field label="Email"  v-model="email" ></v-text-field>
         <v-textarea label="Additional Comments"  v-model="info" ></v-textarea>
         <v-btn text class="success btn" @click="submit()">Submit</v-btn>
@@ -24,6 +36,7 @@ export default {
     return {
       first: "",
       last: "",
+      phone: "",
       email: "",
       info: ""
     }
@@ -52,6 +65,7 @@ export default {
       var infoObj = {
         firstname: this.first,
         lastname: this.last,
+        phone: this.phone,
         email: this.email,
         info: this.info,
         campaign: vars.utm_campaign,
@@ -71,6 +85,7 @@ export default {
       
           this.first = "";
           this.last="";
+          this.phone="";
           this.email="";
           this.info="";
           
@@ -90,5 +105,11 @@ export default {
   color: #fff;
   width: 25%;
   cursor: pointer;
+}
+
+.text-center {
+  margin: 1em;
+  padding: 1em;
+  background: #eee;
 }
 </style>
