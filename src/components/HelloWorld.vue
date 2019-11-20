@@ -29,8 +29,23 @@ export default {
     }
   },//end data
   methods: {
+
     submit() {
       console.log ("Submitting: ", this.first, this.last );
+
+      //cooper s - get campaign identifier from URL
+
+    var varArr = [];
+    var vars = {};
+    var varKey;
+    var varValue;
+    var varObj = {}
+
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+
+    console.log("Our campaign: ", vars.utm_campaign );
 
       var timestamp = new Date();
 
@@ -39,6 +54,7 @@ export default {
         lastname: this.last,
         email: this.email,
         info: this.info,
+        campaign: vars.utm_campaign,
         timestamp: timestamp
       }
 
