@@ -46,6 +46,8 @@ export default {
     submit() {
       console.log ("Submitting: ", this.first, this.last );
 
+      fbq('track', 'Submit Multiline Form');
+
       //cooper s - get campaign identifier from URL
 
     var varArr = [];
